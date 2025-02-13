@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bitys_test.Server", "bitys_test.Server\bitys_test.Server.csproj", "{80127CA4-EE0C-42A4-BD51-EFC6C8D886F3}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "bitys_test.client", "bitys_test.client\bitys_test.client.esproj", "{280214AA-1B1E-4A08-954E-D5C7948C5095}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80127CA4-EE0C-42A4-BD51-EFC6C8D886F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80127CA4-EE0C-42A4-BD51-EFC6C8D886F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80127CA4-EE0C-42A4-BD51-EFC6C8D886F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80127CA4-EE0C-42A4-BD51-EFC6C8D886F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{280214AA-1B1E-4A08-954E-D5C7948C5095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{280214AA-1B1E-4A08-954E-D5C7948C5095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{280214AA-1B1E-4A08-954E-D5C7948C5095}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{280214AA-1B1E-4A08-954E-D5C7948C5095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{280214AA-1B1E-4A08-954E-D5C7948C5095}.Release|Any CPU.Build.0 = Release|Any CPU
+		{280214AA-1B1E-4A08-954E-D5C7948C5095}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
