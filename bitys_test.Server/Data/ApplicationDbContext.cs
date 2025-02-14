@@ -7,7 +7,7 @@ namespace bitys_test.Server.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-        public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; } = default!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

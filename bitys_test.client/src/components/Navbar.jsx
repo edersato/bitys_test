@@ -1,21 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav data-bs-theme="dark" className="navbar navbar-expand-sm bg-primary">
       <div className="container">
-        <Link className="navbar-brand" to="/">CRUD App</Link>
+        <Link className="navbar-brand" to="/">
+          <img src="src/assets/logo-inversa.png" alt="logo_bitys" style={{ width: '80px' }} />
+        </Link>
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/">Home</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/create">Create</Link>
+              <Link className="nav-link" to="/">Usuários</Link>
             </li>
           </ul>
         </div>
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">
+                <FontAwesomeIcon icon={faRightFromBracket} style={{rotate: '180deg', marginRight: '0.5em'}} />
+                Logout
+              </Link>
+            </li>
+          </ul>
       </div>
     </nav>
   );
