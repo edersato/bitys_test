@@ -13,6 +13,7 @@ function Edit() {
   const [situacao, setSituacao] = useState(true);
   const [perfil, setPerfil] = useState('');
 
+  const [showAlert, setShowAlert] = useState(false);
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -39,7 +40,11 @@ function Edit() {
       { headers: { 'Content-Type': 'application/json' } }
     )
       .then(() => {
-        navigate('/');
+        setShowAlert(true);
+        setTimeout(() => {
+          setShowAlert(false);
+          navigate("/");
+        }, 3500);
       })
       .catch(error => console.error('Error updating item:', error));
   };
@@ -47,6 +52,14 @@ function Edit() {
   return (
     <div>
       <h1>Editar Usuário</h1>
+
+      {showAlert && (
+        <div className="alert alert-primary alert-dismissible fade show" role="alert">
+          Usuário editado com sucesso!
+          <button type="button" className="btn-close" onClick={() => setShowAlert(false)}></button>
+        </div>
+      )}
+
       <form onSubmit={handleSubmit}>
       <div className="mb-3">
           <label htmlFor="itemName" className="form-label">Nome</label>
@@ -94,13 +107,13 @@ function Edit() {
         </div>
         <div className="mb-3">
           <label htmlFor="itemIdioma" className="form-label">Idioma</label>
-          <input
-            type="text"
-            id="itemIdioma"
-            className="form-control"
-            value={idioma}
-            onChange={e => setIdioma(e.target.value)}
-          />
+          <select 
+            id="itemIdioma" className='form-select' value={idioma} onChange={e => setIdioma(e.target.value)}>
+            <option value="">Selecione...</option>
+            <option value="PT-BR">Português</option>
+            <option value="ES">Espanhol</option>
+            <option value="EN">Inglês</option>
+          </select>
         </div>
         <div className="mb-3">
           <label htmlFor="itemSenha" className="form-label">Senha</label>

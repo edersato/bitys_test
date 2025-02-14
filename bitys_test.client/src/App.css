@@ -5,7 +5,32 @@
     text-align: center;
 }
 
-th, td {
+th,
+td {
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+@media (min-width: 320px) and (max-width: 991px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+
+    .table {
+        font-size: 0.9rem;
+    }
+
+   .navbar-brand img { 
+    width: 60px
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
 }
