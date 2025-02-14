@@ -35,9 +35,9 @@ namespace bitys_test.Server.Migrations
        columns: new[] { "Id", "Name", "Cpf", "Email", "Data_nasc", "Idioma", "Senha", "Situacao" },
        values: new object[,]
        {
-            { 1, "João Silva", "12345678900", "joao.silva@email.com", new DateTime(1990, 5, 20), "PT-BR", "Senha123", true },
-            { 2, "Maria Oliveira", "98765432100", "maria.oliveira@email.com", new DateTime(1985, 8, 15), "PT-BR", "Senha456", true },
-            { 3, "Carlos Santos", "56789012300", "carlos.santos@email.com", new DateTime(1995, 12, 10), "EN", "Senha789", false }
+            { 1, "João Silva", "12345678900", "joao.silva@email.com", new DateTime(1990, 5, 20), "PT-BR", "Senha123", true, "Admin" },
+            { 2, "Maria Oliveira", "98765432100", "maria.oliveira@email.com", new DateTime(1985, 8, 15), "PT-BR", "Senha456", true, "Gerente" },
+            { 3, "Carlos Santos", "56789012300", "carlos.santos@email.com", new DateTime(1995, 12, 10), "EN", "Senha789", false, "Vendedor" }
        });
         }
 
